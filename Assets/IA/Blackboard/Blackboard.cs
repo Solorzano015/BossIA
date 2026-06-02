@@ -34,46 +34,57 @@ public class Blackboard : MonoBehaviour
 
 
     }
-    private Dictionary<string, float> hola;
+    //private Dictionary<string, float> hola;
     //private Hashtable <string, float> holaDict;
 
 
-    private BlackboardData[] entradas; //lista ordenada
+    private List<BlackboardData> entradas; //lista ordenada,va izq a dere
 
     private void Awake()
     {
-        //entradas = new List<BlackboardData>();
+        entradas = new List<BlackboardData>(); //se inicializa lista para que no haya problemas
 
 
         BlackboardData a = new BlackboardData("vida", 100.0f);
-        entradas[0] = a;
-        //entradas.Add(a);    
+       // entradas[0] = a; //asi no funciona con el tipo de lista 
+        entradas.Add(a);    
 
         BlackboardData b = new BlackboardData("posicion_torre", new Vector3(4, 0, 20));
-        entradas[1] = b;
+        //entradas[1] = b;
+        entradas.Add(b);
 
-        BlackboardData c = new BlackboardData("vida", 20); //
-        entradas[2] = c;
+        BlackboardData c = new BlackboardData("kinematic", new Rigidbody()); //
+        entradas.Add(c);
 
-        // hola.Add("hola", 50);
+        // hola.Add("hola", 50); 
 
-        Debug.Log(GetDataByKey("vida"));
 
+        //Debug.Log(GetDataByKey("posicion_torre")); // reccorrera todas las entradas hasta que la clve sea posicion_torre
+        // en caso de que si la haya va a devolver su data 
+
+        var dato = GetDataByKey<float>("vida");
 
     }
 
-    public object GetDataByKey(string clave)
+    public object GetDataByKey<T>(string clave) //al ser object puede devolver cualquier cosa y no le importa 
     {
 
         foreach(BlackboardData data  in entradas)
         {
-            if (data.clave == clave)
+            if (data.clave.CompareTo(clave) == 0) // comparar un string con un string
             {
-                return data;
+                return (T)data.valor;
             }
         }
 
         return null;
     }
+
+    //ya que se tiene el get data by key para ver datos, hacer otro para agregar los datos
+    //y comprobar antes de incluir a la lista no haya uno con clave repetida y
+    //para mas creativos, que la lista entradas no sea una ordenada sino una clave valor
+
+
+
 
 }
