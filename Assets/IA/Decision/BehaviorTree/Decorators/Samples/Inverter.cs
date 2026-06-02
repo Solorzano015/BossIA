@@ -13,7 +13,7 @@ namespace IA26Online.Decision.BehaviorTree.Decorator
 
         public override bool Run()
         {
-            throw new System.NotImplementedException();
+            return !task.Run();
         }
 
     }

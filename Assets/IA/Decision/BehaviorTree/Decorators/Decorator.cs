@@ -7,7 +7,7 @@ namespace IA26Online.Decision.BehaviorTree.Decorator
 
         protected Task task;
 
-        public Decorator(Task task)
+        public Decorator(Task task) //constructor para clase que no se puede instanciar y que no de problemas
         {
             this.task = task;
         }
