@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 244189048}
   - component: {fileID: 244189047}
+  - component: {fileID: 244189049}
   m_Layer: 0
   m_Name: Agente
   m_TagString: Untagged
@@ -210,6 +211,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &244189049
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244189046}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,6 +513,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1948026767}
   - component: {fileID: 1948026766}
+  - component: {fileID: 1948026768}
+  - component: {fileID: 1948026772}
+  - component: {fileID: 1948026771}
+  - component: {fileID: 1948026770}
+  - component: {fileID: 1948026769}
   m_Layer: 0
   m_Name: 'Minion '
   m_TagString: Untagged
@@ -566,6 +599,89 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1948026768
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948026764}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1948026769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948026764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffc40bc082bfd7d4a824ac3f7da6df2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Minions
+  root: {fileID: 0}
+--- !u!114 &1948026770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948026764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2695260c2576c4418dfa12afcfe7c29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IA26Online.Steering.Combination.Blending.BlenderSteering
+  behaviours:
+  - behaviour: {fileID: 1948026771}
+    weight: 1
+  max_lineal_velocity: 3
+  max_angular_velocity: 3
+--- !u!114 &1948026771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948026764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c07f11922b68674cbbc863b8ce363cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IA26Online.Steering.Kinematic.Delegation.KSeek
+  target: {fileID: 244189049}
+  max_speed: 3
+--- !u!114 &1948026772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948026764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f6640dfb75f26044ac5322dbd5ff5d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KAgent
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

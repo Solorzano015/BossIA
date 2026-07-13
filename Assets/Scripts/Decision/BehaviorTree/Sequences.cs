@@ -1,6 +1,6 @@
 namespace IA26Online.Decision.BehaviorTree
 {
-    public class Sequences : Task
+    public class Sequences : Task //tarea de composicion
     {
         private Task[] children;
 
@@ -14,20 +14,12 @@ namespace IA26Online.Decision.BehaviorTree
             foreach (Task child in children)
             {
                 if (!child.Run() == true)
-                {
-
                     return false;
-                }
             }
 
             return true;
         }
-
-
-
     }
-
-
 }
 
 
