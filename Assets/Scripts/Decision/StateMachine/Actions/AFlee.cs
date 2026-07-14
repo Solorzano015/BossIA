@@ -12,7 +12,7 @@ namespace IA26Online.Decision.StateMachine.Actions
         }
         public override void Execute()
         {
-            boss.steering = boss.flee.GetSteering;
+            boss.steering = boss.flee.GetSteering();
         }
     }
 }

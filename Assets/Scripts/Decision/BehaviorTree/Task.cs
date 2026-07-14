@@ -1,4 +1,5 @@
 using UnityEngine;
+using IA26Online.Decision.BehaviorTree;
 
 namespace IA26Online.Decision.BehaviorTree
 {

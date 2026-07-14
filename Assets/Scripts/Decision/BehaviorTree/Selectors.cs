@@ -1,10 +1,10 @@
 
-
+using IA26Online.Decision.BehaviorTree;
 using UnityEngine;
 
 namespace IA26Online.Decision.BehaviorTree
 {
-    [CreateAssetMenu(fileName = "Selectors", menuName = "Decision/BehaviourTree/Selector")]
+    [CreateAssetMenu(fileName = "Selector", menuName = "Decision/BehaviourTree/Selectors")]
 
 
     public class Selectors : Task //tarea de composicion

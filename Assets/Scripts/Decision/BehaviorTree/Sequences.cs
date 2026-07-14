@@ -1,5 +1,10 @@
+using IA26Online.Decision.BehaviorTree;
+using UnityEngine;
+
 namespace IA26Online.Decision.BehaviorTree
 {
+    [CreateAssetMenu(fileName = "Sequences", menuName = "Decision/BehaviourTree/Sequences")]
+
     public class Sequences : Task //tarea de composicion
     {
         private Task[] children;

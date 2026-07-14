@@ -4,8 +4,12 @@ using IA26Online.Agents;
 namespace IA26Online.Decision.BehaviorTree.Actions
 {
     // Ataque C a C
+    [CreateAssetMenu(
+    fileName = "MeleeAttackAction",
+    menuName = "Decision/BehaviourTree/Actions/MeleeAttackAction")]
     public class MeleeAttackAction : Task
     {
+
         private Boss boss;
 
         public MeleeAttackAction(Boss boss)

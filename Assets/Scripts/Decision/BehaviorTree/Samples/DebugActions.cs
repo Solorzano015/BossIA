@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace IA26Online.Decision.BehaviorTree.Samples
 {
-    [CreateAssetMenu(fileName = "DebugActions", menuName = "Decision/BehaviourTree/Sample/DebugAction")]
+    [CreateAssetMenu(fileName = "DebugAction", menuName = "Decision/BehaviourTree/Samples/DebugAction")]
 
     public class DebugAction : Task //tarea de accion o decision
     {

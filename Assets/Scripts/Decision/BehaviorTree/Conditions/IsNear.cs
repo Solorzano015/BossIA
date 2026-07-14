@@ -1,8 +1,12 @@
 using UnityEngine;
 using IA26Online.Agents;
+using System.IO.Enumeration;
 
 namespace IA26Online.Decision.BehaviorTree.Conditions
 {
+    [CreateAssetMenu(
+    fileName = "IsNear",
+    menuName = "Decision/BehaviourTree/Conditions/IsNear")]
     public class IsNear : Task
     {
         private Boss boss;

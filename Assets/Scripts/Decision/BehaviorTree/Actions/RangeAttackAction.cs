@@ -4,6 +4,9 @@ using IA26Online.Agents;
 namespace IA26Online.Decision.BehaviorTree.Actions
 {
     // Ataque a distancia
+    [CreateAssetMenu(
+    fileName = "RangeAttackAction",
+    menuName = "Decision/BehaviourTree/Actions/RangeAttackAction")]
     public class RangeAttackAction : Task
     {
         private Boss boss;

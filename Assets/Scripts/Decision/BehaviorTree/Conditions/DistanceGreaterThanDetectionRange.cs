@@ -4,6 +4,7 @@ using IA26Online.Agents;
 namespace IA26Online.Decision.BehaviorTree.Conditions
 {
     // >Z : Jugador demasiado lejos para ser detectado
+    [CreateAssetMenu(fileName = "TooFarToDetect", menuName = "Decision/BehaviourTree/Conditions/DistanceGreaterThanDetectionRange")]
     public class DistanceGreaterThanDetectionRange : Task
     {
         private Boss boss;

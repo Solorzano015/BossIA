@@ -62,6 +62,20 @@ namespace IA26Online.Agents
         {
             root.Run();
         }
+        
+        public void EnterPhase2()
+        {
+            if (inPhase2) return;
+            inPhase2 = true;
+
+            // movementSpeed = rageSpeed; // si se manejan variables propias
+            blender.max_lineal_velocity *= speedBoost; // o directamente sobre el blenderSteering
+        }
+
+
+
+
+
         /*
         private void BuildTree()
         {
@@ -108,13 +122,5 @@ namespace IA26Online.Agents
             });
         }
         */
-        public void EnterPhase2()
-        {
-            if (inPhase2) return;
-            inPhase2 = true;
-
-            // movementSpeed = rageSpeed; // si se manejan variables propias
-            blender.max_lineal_velocity *= speedBoost; // o directamente sobre el blenderSteering
-        }
     }
 }
