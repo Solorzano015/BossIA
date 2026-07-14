@@ -1,3 +1,4 @@
+using IA26Online.Agents;
 using IA26Online.Decision.BehaviorTree;
 using UnityEngine;
 
@@ -7,18 +8,18 @@ namespace IA26Online.Decision.BehaviorTree
 
     public class Sequences : Task //tarea de composicion
     {
-        private Task[] children;
+        [SerializeField] private Task[] children;
 
         public Sequences(Task[] children)
         {
             this.children = children;
         }
 
-        public override bool Run()
+        public override bool Run(Boss boss)
         {
             foreach (Task child in children)
             {
-                if (!child.Run() == true)
+                if (!child.Run(boss) == true)
                     return false;
             }
 

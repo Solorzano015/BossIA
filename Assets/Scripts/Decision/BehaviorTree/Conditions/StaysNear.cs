@@ -10,14 +10,9 @@ namespace IA26Online.Decision.BehaviorTree.Conditions
     menuName = "Decision/BehaviourTree/Conditions/StaysNear")]
     public class StaysNear : Task
     {
-        private Boss boss;
+        
 
-        public StaysNear(Boss boss)
-        {
-            this.boss = boss;
-        }
-
-        public override bool Run()
+        public override bool Run(Boss boss)
         {
             float distance = Vector3.Distance(boss.transform.position, boss.Player.position);
             return distance < boss.AttackRange;

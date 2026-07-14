@@ -2,7 +2,7 @@ using IA26Online.Decision.BehaviorTree.Actions;
 using IA26Online.Decision.StateMachine;
 using IA26Online.Decision.StateMachine.Actions;
 
-public static class BossStateMachineBuilder
+public static class BossSMBuilder
 {
     public static HierarchicalSM Build(BossController boss)
     {

@@ -1,3 +1,4 @@
+using IA26Online.Agents;
 using UnityEngine;
 
 namespace IA26Online.Decision.BehaviorTree.Samples
@@ -13,7 +14,7 @@ namespace IA26Online.Decision.BehaviorTree.Samples
             this.message = message;
         }
 
-        public override bool Run()
+        public override bool Run(Boss boss)
         {
             Debug.Log(message);
             return true;

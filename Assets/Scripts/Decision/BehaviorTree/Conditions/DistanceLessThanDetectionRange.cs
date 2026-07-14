@@ -8,14 +8,16 @@ namespace IA26Online.Decision.BehaviorTree.Conditions
 
     public class DistanceLessThanDetectionRange : Task
     {
+        /* CONSTRUCTOR QUE ESTABA EN TODOS PERO SE QUITA YA QUE SE LLAMA DESDE BOSS boss
         private Boss boss;
 
         public DistanceLessThanDetectionRange(Boss boss)
         {
             this.boss = boss;
         }
+        */
 
-        public override bool Run()
+        public override bool Run(Boss boss)
         {
             float distance = Vector3.Distance(boss.transform.position, boss.Player.position);
             return distance < boss.DetectionRange;

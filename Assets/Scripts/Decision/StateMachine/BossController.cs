@@ -88,7 +88,7 @@ namespace IA26Online.Decision.StateMachine
             player_attacks = value;
         }
 
-        public void Die(float health)
+        public void Die()
         {
             current_health = 0f;
             Debug.Log("BOSS HA EXPLOTADO");

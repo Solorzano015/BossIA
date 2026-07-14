@@ -7,14 +7,9 @@ namespace IA26Online.Decision.BehaviorTree.Conditions
     [CreateAssetMenu(fileName = "TooFarToDetect", menuName = "Decision/BehaviourTree/Conditions/DistanceGreaterThanDetectionRange")]
     public class DistanceGreaterThanDetectionRange : Task
     {
-        private Boss boss;
+             
 
-        public DistanceGreaterThanDetectionRange(Boss boss)
-        {
-            this.boss = boss;
-        }
-
-        public override bool Run()
+        public override bool Run(Boss boss)
         {
             float distance = Vector3.Distance(boss.transform.position, boss.Player.position);
             return distance > boss.DetectionRange;

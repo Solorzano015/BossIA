@@ -10,14 +10,9 @@ namespace IA26Online.Decision.BehaviorTree.Actions
     public class MeleeAttackAction : Task
     {
 
-        private Boss boss;
+        
 
-        public MeleeAttackAction(Boss boss)
-        {
-            this.boss = boss;
-        }
-
-        public override bool Run()
+        public override bool Run(Boss boss)
         {
             float distance = Vector3.Distance(boss.transform.position, boss.Player.position);
 

@@ -37,7 +37,7 @@ namespace IA26Online.Agents
         [SerializeField] private SteeringBehaviour wanderBehaviour; // KWander
         [SerializeField] private BlenderSteering blender;
 
-        private Task root;
+        [SerializeField] private Task root;
         private bool inPhase2 = false;
 
         // Propiedades públicas para que las tasks del árbol puedan leer el estado del Boss
@@ -60,7 +60,12 @@ namespace IA26Online.Agents
         */
         private void Update()
         {
-            root.Run();
+            if (root != null)
+            {
+
+                root.Run(this);
+
+            }
         }
         
         public void EnterPhase2()

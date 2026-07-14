@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cc53d2dce3f4c446ada67598e7621a6, type: 3}
+  m_Name: Sequences3.1.1
+  m_EditorClassIdentifier: Assembly-CSharp::IA26Online.Decision.BehaviorTree.Sequences
+  children:
+  - {fileID: 11400000, guid: 8e064b2c828b856489e4832f477452ec, type: 2}
+  - {fileID: 11400000, guid: 791e1c6a7fbeb6c4ca2417bca7f80898, type: 2}
+  - {fileID: 11400000, guid: cb0d359d3eb702443b6fd29651c1995c, type: 2}
+  - {fileID: 11400000, guid: aea9916552624cc448432fc30c42c8ba, type: 2}

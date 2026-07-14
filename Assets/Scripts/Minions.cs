@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Minions : MonoBehaviour
 {
+    /**
     [SerializeField] private Task root; //esta en la copa del arbol pero lo llamamos "root"
 
     private Blackboard.BlackboardData blackboardData; //al estar fuera se puede llamar asi 
@@ -29,4 +30,5 @@ public class Minions : MonoBehaviour
     {
         root.Run();
     }
+    */
 }

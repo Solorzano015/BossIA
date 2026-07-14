@@ -11,14 +11,9 @@ namespace IA26Online.Decision.BehaviorTree.Conditions
     menuName = "Decision/BehaviourTree/BossIA/HealthBelow50")]
     public class HealthBelow50 : Task
     {
-        private Boss boss;
+        
 
-        public HealthBelow50(Boss boss) // constructor para la clase que no puede instanciar
-        {
-            this.boss = boss;
-        }
-
-        public override bool Run()
+        public override bool Run(Boss boss)
         {
             return boss.Health < 50f;
         }

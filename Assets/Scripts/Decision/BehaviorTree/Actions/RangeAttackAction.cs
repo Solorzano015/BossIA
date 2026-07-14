@@ -9,14 +9,9 @@ namespace IA26Online.Decision.BehaviorTree.Actions
     menuName = "Decision/BehaviourTree/Actions/RangeAttackAction")]
     public class RangeAttackAction : Task
     {
-        private Boss boss;
+        
 
-        public RangeAttackAction(Boss boss)
-        {
-            this.boss = boss;
-        }
-
-        public override bool Run()
+        public override bool Run(Boss boss)
         {
             float distance = Vector3.Distance(boss.transform.position, boss.Player.position);
 

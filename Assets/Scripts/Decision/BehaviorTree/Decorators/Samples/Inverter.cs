@@ -1,3 +1,4 @@
+using IA26Online.Agents;
 using UnityEngine;
 
 namespace IA26Online.Decision.BehaviorTree.Decorators.Sample
@@ -9,9 +10,9 @@ namespace IA26Online.Decision.BehaviorTree.Decorators.Sample
         {
         }
 
-        public override bool Run()
+        public override bool Run(Boss boss)
         {
-            return !task.Run();
+            return !task.Run(boss);
         }
     }
 }
