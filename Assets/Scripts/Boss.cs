@@ -51,19 +51,21 @@ namespace IA26Online.Agents
         public SteeringBehaviour PursueBehaviour => pursueBehaviour;
         public SteeringBehaviour WanderBehaviour => wanderBehaviour;
 
+        /* para no crear los scriptable objects
         private void Awake()
         {
             BuildTree();
         }
 
+        */
         private void Update()
         {
             root.Run();
         }
-
+        /*
         private void BuildTree()
         {
-            // --- Rama de ataque: decide melee (con contraataque reactivo) o a distancia ---
+            // -- decision de aatque --
             Task attackSelector = new Selectors(new Task[]
             {
                 new Sequences(new Task[]
@@ -80,7 +82,7 @@ namespace IA26Online.Agents
                 })
             });
 
-            // --- Rama "Distancia de Jugador" ---
+            // --- Distancia de Jugador ---
             Task distanceTree = new Selectors(new Task[]
             {
                 attackSelector,
@@ -105,7 +107,7 @@ namespace IA26Online.Agents
                 distanceTree
             });
         }
-
+        */
         public void EnterPhase2()
         {
             if (inPhase2) return;
