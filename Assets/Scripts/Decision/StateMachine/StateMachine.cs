@@ -15,10 +15,12 @@ namespace IA26Online.Decision.StateMachine
             root_state = initialState;
             current_state = root_state;
         }
+        /* ESTO LO COMENTE YO ISA
         public virtual Action[] Update()
         {
 
         }
+        */
     }
 }
 

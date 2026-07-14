@@ -13,7 +13,7 @@ namespace IA26Online.Decision.StateMachine
         //acciones_salida : Action[]
         public Action[] actions_exit = new Action[0];
         //transiciones : Transition[]
-        public Action[] transitions = new Transition[0];
+        //public Action[] transitions = new Transition[0]; //ESTO LO COMENTE ISA
 
         //estado_padre : State
         public State root_state;

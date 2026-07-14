@@ -22,8 +22,8 @@ namespace IA26Online.Steering.Combination.Blending
 
         [SerializeField] private BehaviourAndWeight[] behaviours;
 
-        [SerializeField] private float max_lineal_velocity;
-        [SerializeField] private float max_angular_velocity;
+        [SerializeField] public float max_lineal_velocity;
+        [SerializeField] protected float max_angular_velocity;
 
         private Rigidbody2D agent;
 

@@ -1,0 +1,28 @@
+using UnityEngine;
+using IA26Online.Agents;
+
+namespace IA26Online.Decision.BehaviorTree.Actions
+{
+    // Ataque C a C
+    public class MeleeAttackAction : Task
+    {
+        private Boss boss;
+
+        public MeleeAttackAction(Boss boss)
+        {
+            this.boss = boss;
+        }
+
+        public override bool Run()
+        {
+            float distance = Vector3.Distance(boss.transform.position, boss.Player.position);
+
+            if (distance > boss.AttackRange)
+                return false; // por si acaso: fuera de rango, la secuencia falla
+
+            // ... lógica del golpe cuerpo a cuerpo (daño, animación, cooldown)
+            boss.SeekBehaviour.GetSteering(); // se acerca/orienta al jugador con KSeek mientras golpea
+            return true;
+        }
+    }
+}
