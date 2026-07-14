@@ -12,7 +12,7 @@ namespace IA26Online.Decision.StateMachine.Actions
         }
         public override void Execute()
         {
-            //logica del segundo ataque de la phase 2
+            Debug.Log("Ataque Melee 2 - Phase 2");
         }
     }
 }

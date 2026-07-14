@@ -12,7 +12,7 @@ namespace IA26Online.Decision.StateMachine.Actions
         }
         public override void Execute()
         {
-            //logica del ataque a distancia de la phase 1
+            Debug.Log("Ataque a distancia - Fase 1");
         }
     }
 }

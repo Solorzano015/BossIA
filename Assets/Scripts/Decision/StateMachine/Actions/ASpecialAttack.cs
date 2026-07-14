@@ -12,7 +12,7 @@ namespace IA26Online.Decision.StateMachine.Actions
         }
         public override void Execute()
         {
-            //logica del ataque especial
+            Debug.Log("Ataque especial");
         }
     }
 }
