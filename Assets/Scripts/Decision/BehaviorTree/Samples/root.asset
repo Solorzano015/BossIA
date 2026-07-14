@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: root
   m_EditorClassIdentifier: Assembly-CSharp::IA26Online.Decision.BehaviorTree.Selectors
   children:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 1a8134d8c9accf048b7c1ee239f1f1d4, type: 2}
+  - {fileID: 11400000, guid: 52e18db7f52b9ac4cbf750f81f683daa, type: 2}
+  - {fileID: 11400000, guid: 3d4ae5b5fe5fc9e4aa1cf23944538ce2, type: 2}
